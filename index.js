@@ -1,6 +1,5 @@
 let largestSubarraySum = array => {
   let allSums = [];
-  let subArrays = [];
   let add = (total, current) => {
     return total + current;
   };
@@ -9,6 +8,6 @@ let largestSubarraySum = array => {
     let subArrSum = currentSubArr.reduce(add, 0);
     allSums.push(subArrSum);
   }
-  //   console.log(allSums);
+
   return Math.max(...allSums);
 };
